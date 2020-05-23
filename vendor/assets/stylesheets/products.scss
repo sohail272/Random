@@ -1,0 +1,115 @@
+body {
+	background-color: #f1f3f6;
+	@media(min-width: 768px) {
+		&#default {
+			.container {
+				.columns {
+					margin-left: 0px;
+					margin-right: 0px;
+				}
+				#wrapper {
+
+					#breadcrumbs {
+						width: calc(100% - 30px);
+						background: #fff;
+				    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+				    padding: 15px;
+
+						ol.inline {
+							margin-bottom: 0px;
+						}
+					}
+
+					#sidebar {
+						width: 20%;
+				    background: #fff;
+				    box-shadow: 0 1px 8px 0 rgba(0,0,0,.06);
+
+						.sidebar-item {
+							padding: 15px;
+							padding-bottom: 0px;
+    					margin-bottom: -15px;
+							ul.taxons-list {
+								list-style: none;
+								li {
+									font-size: 14px;
+							    font-weight: normal;
+							    line-height: 32px;
+							    margin-left: 15px;
+									a {
+										color: #3e3c3cc9;
+									}
+								}
+							}
+						}
+						form#sidebar_products_search {
+							.navigation {
+								padding: 15px;
+	    					margin-bottom: 0px;
+	   						padding-bottom: 0px;
+	    					.filter-title {
+	    						text-transform: uppercase;
+							    border-bottom: 1px solid #d9d9db;
+							    margin-bottom: 5px;
+							    font-size: 14px;
+							    color: black;
+	    					}
+	    					ul.filter_choices {
+	    						list-style: none;
+	    						margin: 0;
+	    						li.nowrap {
+	    							font-size: 14px;
+								    font-weight: normal;
+								    line-height: 32px;
+								    margin-left: 15px;
+	    						}
+	    					}
+							}
+							input[type='submit'] {
+    						margin: 15px;
+    					}
+						}
+					}
+					#content {
+						width: 80%;
+						/*[data-hook='homepage_products'] {*/
+							.flash {
+								margin-left: 15px;
+							}
+							.taxon-title, .subtaxon-title, .search-results-title {
+								width: calc(100% - 45px);
+						    background: #fff;
+						    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+						    margin: 0 15px;
+						    padding: 15px;
+						    border-bottom: 1px solid #d9d9db;
+							}
+							ul#products {
+								margin-left: 15px;
+						    background: #fff;
+						    box-shadow: 0 1px 8px 0 rgba(0,0,0,.06);
+								li {
+									width: 25%;
+									min-height: 300px;
+									padding-bottom: 20px;
+									margin-bottom: 0px;
+									&:hover {
+										box-shadow: 0 3px 16px 0 rgba(0,0,0,.11);
+									}
+									.product-image {
+										border: none;
+										background: none;
+										min-height: 230px;
+									}
+									.info {
+										margin: 0px 15px;
+									}
+								}
+							}
+						/*}*/
+					}
+				}
+			}
+		}
+	}
+}
