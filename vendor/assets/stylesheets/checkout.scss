@@ -1,0 +1,95 @@
+/*@media(min-width: 768px) {	*/
+	body {
+		&#default {
+			#wrapper {
+				#content {
+					width: 100%;
+					#checkout {
+						[data-hook='checkout_header'] {
+							margin-bottom: 15px;
+							background: #fff;
+    						box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+    						padding: 15px;
+    						h1 {
+    							line-height: 30px;
+    						}
+    						[data-hook='checkout_progress'] {
+    							.progress-steps {
+    								margin: 0;
+    							}
+    						}
+    						.columns {
+    							width: 100%;
+    						}
+						}
+						[data-hook='checkout_content'] {
+							[data-hook='checkout_form_wrapper'] {
+								width: calc(100% - 30px);
+								background: #fff;
+							    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+							    padding: 15px;
+							    form {
+							    	[data-hook='billing_fieldset_wrapper'] {
+							    		@media(max-width: 767px) {
+							    			width: 100%;
+							    		}
+							    	}
+							    	[data-hook='shipping_fieldset_wrapper'] {
+							    		margin-left: 15px;
+							    		@media(max-width: 767px) {
+							    			margin: 0;
+							    			width: 100%;
+							    		}
+							    	}
+							    	[data-hook='shipping_method_inner'] {
+							    		#methods {
+							    			.shipment {
+							    				.stock-contents {
+							    					width: 100%;
+							    				}
+							    			}
+							    		}
+							    	}
+							    	#line-items {
+							    		width: 100%;
+							    		img {
+											@media(min-width: 768px) {
+												width: 112px;
+												height: 112px;
+											}
+											width: 50px;
+											height: 50px;
+										}
+							    	}
+							    	@media(max-width: 767px) {
+								    	.steps-data > * {
+								    		width: 100%;
+								    	}
+								    }
+							    }
+							}
+							#checkout-summary {
+								width: 100%;
+								background: #fff;
+							    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+							}
+						}
+					}
+					#order_summary {
+						width: 100%;
+						background: #fff;
+					    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+
+					    #line-items {
+				    		width: 100%;
+				    		img {
+				    			height: 112px;
+				    			width: 112px;
+				    		}
+				    	}
+					}
+				}
+			}
+		}
+	}
+/*}*/

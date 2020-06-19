@@ -1,4 +1,22 @@
 body {
+	.floating-header {
+	    position: fixed;
+	    width: calc(100% - 30px) !important;
+	    margin: 0;
+	    left: 0;
+	    right: 0;
+	    padding: 15px;
+	    background-color: #f1f3f6;
+	    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+	    z-index: 100;
+
+
+	    -ms-transition: all 0.3s ease-out;
+	    -moz-transition: all 0.3s ease-out;
+	    -webkit-transition: all 0.3s ease-out;
+	    -o-transition: all 0.3s ease-out;
+	    transition: all 0.3s ease-out;
+	}
 	.container {
 		select#taxon {
 			display: none;
@@ -9,7 +27,10 @@ body {
 		}
 	}
 	@media(min-width: 768px) {
-	
+		.flash {
+			margin-left: 0;
+    		box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+		}
 		.container {
 			width: auto;
 			padding: 0 30px;
@@ -24,14 +45,11 @@ body {
 	    		width: calc(100% - 60px);
 	    		height: 100px;
 	    		box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.15);
+	    		z-index: 100;
 
 				#logo {
 					width: 25%;
 					margin: 0px;
-					height: 60px;
-					img {
-						height: 60px;
-					}
 				}
 				#top-nav-bar {
 					width: 75%;
@@ -59,11 +77,14 @@ body {
 			    				}
 			    				input[type='submit'] {
 			    					position: absolute;
-								    background: image-url("spree/frontend/cart.png") no-repeat center;
+								    /*background: image-url("spree/frontend/cart.png") no-repeat center;*/
 								    font-size: 0;
 								    height: 36px;
 								    border: 0;
 								    right: 15px;
+								    &:before {
+								    	content: "\f002";
+								    }
 			    				}
 			    			}
 			    		}
@@ -89,6 +110,71 @@ body {
 					width: 100%;
 				}
 			}
+		}
+	}
+	@media(max-width: 767px) {
+		.container {
+			width: auto;
+			padding: 0 15px;
+			#header {
+				background-color: #f1f3f6;
+	    		width: 100%;
+	    		box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.15);
+	    		margin: 0 -15px;
+	    		padding: 0 15px;
+	    		margin-bottom: 15px;
+
+	    		figure, nav {
+	    			width: 100%;
+	    			margin: 0;
+	    		}
+	    		#logo {
+	    			padding: 15px 0;
+	    		}
+	    		#nav-bar {
+	    			margin-bottom: 0;
+	    			#search-bar {
+	    				margin: 0;
+	    				padding: 0;
+	    				form {
+		    				#keywords {
+		    					width: 100%;
+							    padding: 0 40px 0 16px;
+							    border-radius: 2px 0 0 2px;
+							    border: 0;
+							    outline: 0 none;
+							    font-size: 14px;
+							    height: 36px;
+							    float: left;
+							    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+		    				}
+		    				input[type='submit'] {
+		    					position: absolute;
+							    background: image-url("spree/frontend/cart.png") no-repeat center;
+							    font-size: 0;
+							    height: 36px;
+							    border: 0;
+							    right: 30px;
+		    				}
+		    			}
+	    			}
+	    		}
+	    		#main-nav-bar {
+	    			margin: 0;
+	    			border: 0;
+	    			padding: 15px 0;
+	    			#home-link {
+	    				a {
+	    					font-size: 14px
+	    				}
+	    			}
+	    			#link-to-cart {
+	    				.cart-info, .amount {
+	    					font-size: 14px;
+	    				}
+	    			}
+	    		}
+	    	}
 		}
 	}
 }

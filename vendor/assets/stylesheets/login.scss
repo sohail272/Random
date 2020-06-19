@@ -1,0 +1,48 @@
+body {
+	&#login, &#signup {
+		#wrapper {
+			#content {
+				width: calc(100% - 30px);
+				margin: 0;
+				background: #fff;
+				box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+				padding: 15px;
+				h1 {
+					border-bottom: 1px solid #d9d9db;
+				    padding-bottom: 15px;
+				}
+				h6 {
+			    	padding-bottom: 0px;
+				}
+				#registration {
+					margin-top: 15px;
+					#account, #guest_checkout {
+						@media(min-width: 768px) {
+							margin: 0;
+							width: 50%;
+						}
+						width: 100%;
+					}
+					#account {
+						@media(max-width: 767px) {
+							padding-bottom: 15px;
+							border-bottom: 1px solid #d9d9db;
+						}
+					}
+					#guest_checkout {
+						@media(max-width: 767px) {
+							padding-top: 15px;
+						}
+					}
+				}
+				#existing-customer {
+				}
+				form {
+					p {
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+}
